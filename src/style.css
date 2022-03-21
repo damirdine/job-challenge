@@ -1,8 +1,16 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
+
+*,::before, ::after{
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h2{
+    margin: 15px 25px;
 }
 a,a:hover,a:visited,a:active{text-decoration: none;}
 /* header */
@@ -24,6 +32,7 @@ nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     width: 45%;
 }
 a{
@@ -31,10 +40,146 @@ a{
     color: white;
 }
 header img {
-    margin: 10px;
+    margin: 5px;
     background-color: red;
     border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: contain;
+}
+/* main */
+main{
+    display: flex;
+    flex-direction: column;
+}
+.carrousel-item {
+    margin-top: -27.75px;
+}
+.carrousel-img{
+    display: none;
+    width: 100%;
+}
+.carrousel-img.active{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    opacity: 0.75;
+}
+.carrousel-item h3{
+    position: relative;
+    left: 15%;
+    top: -45px;
+    color: white;
+    font-weight: bold;
+    background-color: darkblue;
+    width: 85%;
+    font-size: small;
+}
+    /* .carrousel mixin */
+.carrousel-arrow{
+    border: 1px solid darkblue;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index:1;
+}
+
+.fa-arrow-left{
+    position: relative;
+    top: 125px;
+    left: 5%;
+}
+.fa-arrow-right{
+    position: relative;
+    top: 125px;
+    left:85%;
+}
+/* section projets */
+.container-projets{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.card-projet{
+    width: 30vw;
+    min-width: 220px
+}
+.card-projet img{
+    width: 100%;
+}
+/* main contact  */
+
+section form{
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    padding: 15px;
+    margin: 2%;
+    border-radius: 5px;
+}
+form div label{
+    display: inline-block;
+    width: 25%;
+}
+.message{
+    display: flex;
+}
+.message label{
+    margin: 2px;
+}
+form div{
+    margin: 4px 0;
+    width: 102%;
+}
+form div input,
+textarea{
+    width: 75%;
+    max-width: 72%;
+    border-radius: 2px;
+    margin: 5px;
+}
+input{
+    height: 45px;
+    padding-left: 15px;
+}
+textarea {
+    min-height: 150px;
+    padding-left: 15px;
+}
+
+form button {
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+    width: 125px;
+    align-self: flex-end;
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* footer */
+footer{
+    background-color: #3B5A9C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.container-icon{
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.fa-facebook-square{
+    color: #3A5997;
+}
+.fa-twitter-square{
+    color: #55ACEF;
+}
+.fa-linkedin-square{
+    color: #007BB6;
 }

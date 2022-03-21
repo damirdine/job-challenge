@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>job challenge</title>
 </head>
 <body>
@@ -19,14 +20,97 @@
                     <a href="#">A propos</a>
                 </li>
                 <li>
-                    <a href="#">Projets</a>
+                    <a href="#projets">Projets</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
         <img src="https://images.unsplash.com/photo-1647659583357-19fe7584a56b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="photo de profil">
     </header>
+    <main>
+        <section class="container-carrousel">
+            <i class="fa fa-arrow-left carrousel-arrow" aria-hidden="true"></i>
+            <i class="fa fa-arrow-right carrousel-arrow" aria-hidden="true"></i>
+            <div class="carrousel-item">
+                <img class="carrousel-img active" src="https://images.unsplash.com/photo-1533302229631-95b8bea33df3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="carrousel">
+                <img class="carrousel-img" src="https://images.unsplash.com/photo-1605007493699-af65834f8a00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" alt=""><img class="carrousel-img" src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1746&q=80" alt="">
+                <h3 class="carrousel-quote">
+                    Lorem ipsum dolor sit amet.
+                </h3>
+            </div>
+        </section>
+        <section class="projets">
+            <h2 id="projets">Projets</h2>
+            <div class="container-projets">
+                <div class="card-projet">
+                    <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+                    <p>projet #number</p>
+                </div>
+                <div class="card-projet">
+                    <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+                    <p>projet #number</p>
+                </div>
+                <div class="card-projet">
+                    <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+                    <p>projet #number</p>
+                </div>
+                <div class="card-projet">
+                    <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+                    <p>projet #number</p>
+                </div>
+                <div class="card-projet">
+                    <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+                    <p>projet #number</p>
+                </div>
+                <div class="card-projet">
+                    <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="">
+                    <p>projet #number</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <div class="firstname">
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" placeholder="Your name ...">
+                </div>
+                <hr>
+                <div class="lastname">
+                    <label for="lastname">Last name</label>
+                    <input type="text" id="lastname" placeholder="Your last name...">
+                </div>
+                <hr>
+                <div class="mail">
+                    <label for="mail">Mail</label>
+                    <input type="email" id="mail" placeholder="jhondoe@mail.com">
+                </div>
+                <hr>
+                <div class="message">
+                    <label for="message">Subject</label>
+                    <textarea name="message" id="message" placeholder="Write something"></textarea>
+                </div>
+                <button type="reset">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h2>Footer</h2>
+        <div class="container-icon">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./src/app.js"></script>
 </body>
 </html>
