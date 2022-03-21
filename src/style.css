@@ -160,7 +160,41 @@ form button {
     border-radius: 5px;
     margin-right: 5px;
 }
-
+.rgdp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rgdp label {
+    width: 100%;
+}
+p.invalid {
+    color: red;
+}
+.valid{
+    color: green;
+}
+input#rgpd{
+    width: 16px;
+}
+input:required{
+    border: none;
+}
+input:invalid {
+    border: 2px dashed red;
+}
+input:valid {
+    border: 1px solid green;
+}
+input:checked{
+    color: green;
+}
+p.notice{
+    display: none;
+}
+p.invalid{
+    display: inline-block;
+}
 /* footer */
 footer{
     background-color: #3B5A9C;

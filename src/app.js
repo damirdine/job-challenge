@@ -27,6 +27,8 @@ precedent.addEventListener('click', slidePrecedente)
 
 // from required
 
-const inputs =  document.querySelectorAll('input','textarea');
+const input =  document.querySelectorAll('input');
 
-console.log()
+
+const namePattern = h;
+const emailPattern = e;
