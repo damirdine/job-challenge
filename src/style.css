@@ -160,12 +160,12 @@ form button {
     border-radius: 5px;
     margin-right: 5px;
 }
-.rgdp{
+.rgpd{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.rgdp label {
+.rgpd label {
     width: 100%;
 }
 p.invalid {
@@ -180,9 +180,9 @@ input#rgpd{
 input:required{
     border: none;
 }
-input:invalid {
+/* input:invalid {
     border: 2px dashed red;
-}
+} */
 input:valid {
     border: 1px solid green;
 }

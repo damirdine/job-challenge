@@ -26,9 +26,47 @@ function slidePrecedente(){
 precedent.addEventListener('click', slidePrecedente)
 
 // from required
+const inputName =  document.querySelectorAll('input[type=text]');
+const inputEmail = document.querySelector('input[type=mail]');
+const rgpdCheck = document.querySelector('#rgpd');
+const notice = document.querySelectorAll('.notice');
+const submitButton = document.querySelector('button');
+const namePattern = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
+const mailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+// NAME VALIDATION
+// console.log(rgpdCheck)
 
-const input =  document.querySelectorAll('input');
+submitButton.addEventListener('click', () => {
+// name validation
+     let result = namePattern.test(inputName[0].value);
+     if (result==false){
+        notice[0].classList.add("invalid"); 
+        //console.log('firstname invalid');
+     }else{
+        notice[0].classList.remove("invalid"); 
+     };
+     let result1 = namePattern.test(inputName[1].value);
+     if (result1==false){
+         notice[1].classList.add("invalid"); 
+         //console.log('lastname invalid');
+     }else{
+        notice[1].classList.remove("invalid"); 
+     };
+// mail validation
+    let resultMail = mailPattern.test(inputEmail);
+    if (resultMail==false){
+        //console.log('mail invalid');
+        notice[2].classList.add("invalid"); 
+    }else{
+        notice[2].classList.remove("invalid"); 
+     };
+// rgdp validation
 
+    if(document.querySelector('#rgpd').checked){
+        notice[4].classList.remove("invalid")
+    }else{
+        notice[4].classList = 'invalid';
+        //console.log('RGPD NOT CHECKED');
+    }
 
-const namePattern = h;
-const emailPattern = e;
+})
