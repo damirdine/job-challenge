@@ -3,7 +3,7 @@ const nbSlide = items.length;
 const suivant = document.querySelector('.fa-arrow-right');
 const precedent = document.querySelector('.fa-arrow-left');
 let count = 0;
-//console.log(items)
+
 function slideSuivante(){
     items[count].classList.remove('active');
     if(count < nbSlide - 1){
@@ -34,28 +34,24 @@ const submitButton = document.querySelector('button');
 const namePattern = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
 const mailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 // NAME VALIDATION
-// console.log(rgpdCheck)
 
 submitButton.addEventListener('click', () => {
 // name validation
      let result = namePattern.test(inputName[0].value);
      if (result==false){
         notice[0].classList.add("invalid"); 
-        //console.log('firstname invalid');
      }else{
         notice[0].classList.remove("invalid"); 
      };
      let result1 = namePattern.test(inputName[1].value);
      if (result1==false){
          notice[1].classList.add("invalid"); 
-         //console.log('lastname invalid');
      }else{
         notice[1].classList.remove("invalid"); 
      };
 // mail validation
     let resultMail = mailPattern.test(inputEmail);
     if (resultMail==false){
-        //console.log('mail invalid');
         notice[2].classList.add("invalid"); 
     }else{
         notice[2].classList.remove("invalid"); 
@@ -66,7 +62,6 @@ submitButton.addEventListener('click', () => {
         notice[4].classList.remove("invalid")
     }else{
         notice[4].classList = 'invalid';
-        //console.log('RGPD NOT CHECKED');
     }
 
 })
